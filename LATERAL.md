@@ -2,10 +2,26 @@
 
 ## Ways to think about JOIN LATERAL
 
+<https://stackoverflow.com/questions/28550679/what-is-the-difference-between-lateral-join-and-a-subquery-in-postgresql>
+<https://stackoverflow.com/questions/25536422/optimize-group-by-query-to-retrieve-latest-row-per-user>
+
+### Manual Description
+
+Subqueries appearing in FROM can be preceded by the key word LATERAL. This allows them to reference columns provided by preceding FROM items. (Without LATERAL, each subquery is evaluated independently and so cannot cross-reference any other FROM item.)
+
+Table functions appearing in FROM can also be preceded by the key word LATERAL, but for functions the key word is optional; the function's arguments can contain references to columns provided by preceding FROM items in any case.
+
 ### In-line SELECT
 
-A SELECT can be used in a select-list, but only if it returns a single row with a single column.
-JOIN LATERAL can be thought of as a way to remove both of those restrictions 
+A SELECT can be used in a *select-list* (this is called a **correlated subquery**), but only if it returns a single row with a single column.
+JOIN LATERAL can be thought of as a way to remove both of those restrictions.
+
+### Looping
+
+A LATERAL join is like a SQL foreach loop, in which the query iterates over each row in a result set 
+and evaluates a subquery using that row as a parameter.
+
+
 
 ## Factor out expressions
 
@@ -45,6 +61,11 @@ by automatically doing a LATERAL join for functions returning recordsets with si
 WITH data(geom)AS (VALUES ( 'MULTIPOINT((1 1), (2 2), (3 3), (4 4))'::geometry ) )
 SELECT ST_GeometryN(geom, generate_series(1, ST_NumGeometries(geom)) ) FROM data;
 ```
+
+## Examples
+
+* Conversion Funnel: <https://heap.io/blog/postgresqls-powerful-new-join-type-lateral>
+
 
 ## KNN queries
 
