@@ -5,7 +5,7 @@
 <https://stackoverflow.com/questions/28550679/what-is-the-difference-between-lateral-join-and-a-subquery-in-postgresql>
 <https://stackoverflow.com/questions/25536422/optimize-group-by-query-to-retrieve-latest-row-per-user>
 
-### Manual Description
+### Postgres Manual Description
 
 Subqueries appearing in FROM can be preceded by the key word LATERAL. This allows them to reference columns provided by preceding FROM items. (Without LATERAL, each subquery is evaluated independently and so cannot cross-reference any other FROM item.)
 
