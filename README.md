@@ -1,2 +1,2 @@
 # pg-doc
-Docs for PostGIS
+Docs for Postgres and PostGIS
