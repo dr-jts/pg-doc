@@ -22,7 +22,7 @@ DROP FUNCTION name(args, ...);
 
 ### Kill a query process
 
-* Identify the PID of the query to terminate:
+* Identify the PID of the query to terminate
 ```sql
 SELECT pid, query FROM pg_stat_activity WHERE state = 'active'; 
 ```
@@ -30,7 +30,7 @@ SELECT pid, query FROM pg_stat_activity WHERE state = 'active';
 ```sql
 SELECT pg_cancel_backend(PID);  
 ```
-* Kill process hard:
+* Kill process hard
 ```sql
 SELECT pg_terminate_backend(PID);
 ```
