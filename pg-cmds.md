@@ -1,6 +1,8 @@
-## Postgres Queries
+# Postgres Queries
 
-### List all functions
+## Functions
+
+### List functions
 
 ```
 SELECT routines.routine_name, parameters.data_type, parameters.ordinal_position
@@ -16,9 +18,12 @@ Or in psql:
 ```
 
 ### Drop function
+Copy arg list from above query (remove `DEFAULT` clauses)
 ```
 DROP FUNCTION name(args, ...);
 ```
+
+## Query processes
 
 ### Kill a query process
 
