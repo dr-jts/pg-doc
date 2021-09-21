@@ -1,4 +1,4 @@
-# Postgres Queries
+# Postgres Management Queries
 
 ## Functions
 
