@@ -4,7 +4,7 @@
 
 ### List functions
 
-```
+```sql
 SELECT routines.routine_name, parameters.data_type, parameters.ordinal_position
 FROM information_schema.routines
     LEFT JOIN information_schema.parameters ON routines.specific_name=parameters.specific_name
@@ -19,7 +19,7 @@ Or in psql:
 
 ### Drop function
 Copy arg list from above query (remove `DEFAULT` clauses)
-```
+```sql
 DROP FUNCTION name(args, ...);
 ```
 
