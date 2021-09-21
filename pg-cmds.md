@@ -23,18 +23,18 @@ DROP FUNCTION name(args, ...);
 ### Kill a query process
 
 * Identify the PID of the query to terminate:
-```
+```sql
 SELECT pid, query FROM pg_stat_activity WHERE state = 'active'; 
 ```
-* Kill it softly
-```
+* Kill process softly
+```sql
 SELECT pg_cancel_backend(PID);  
 ```
-* Kill it hard:
-```
+* Kill process hard:
+```sql
 SELECT pg_terminate_backend(PID);
 ```
-* As one handy SQL statement:
+* Kill all queries for current user
 ```sql
 SELECT pg_terminate_backend(pid) FROM pg_stat_activity WHERE username=current_user
 ```
