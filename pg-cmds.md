@@ -18,9 +18,9 @@ Or in psql:
 ```
 
 ### Drop function
-Copy arg list from above query (remove `DEFAULT` clauses)
+Copy arg list from `psql` display (remove `DEFAULT` clauses)
 ```sql
-DROP FUNCTION name(args, ...);
+DROP FUNCTION name(arg1, type1, ...);
 ```
 
 ## Query processes
