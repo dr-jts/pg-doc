@@ -23,6 +23,17 @@ Copy arg list from `psql` display (remove `DEFAULT` clauses)
 DROP FUNCTION name(arg1, type1, ...);
 ```
 
+### Create DROP FUNCTION commands
+
+More details [here](https://stackoverflow.com/questions/7622908/drop-function-without-knowing-the-number-type-of-parameters).
+
+```sql
+SELECT 'DROP FUNCTION ' || oid::regprocedure
+FROM   pg_proc
+WHERE  proname = 'my_function_name'  -- name without schema-qualification
+AND    pg_function_is_visible(oid);  -- restrict to current search_path
+```
+
 ## Query processes
 
 ### Kill a query process
