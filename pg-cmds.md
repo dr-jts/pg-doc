@@ -28,10 +28,10 @@ DROP FUNCTION name(arg1, type1, ...);
 More details [here](https://stackoverflow.com/questions/7622908/drop-function-without-knowing-the-number-type-of-parameters).
 
 ```sql
-SELECT 'DROP FUNCTION ' || oid::regprocedure
-FROM   pg_proc
-WHERE  proname = 'my_function_name'  -- name without schema-qualification
-AND    pg_function_is_visible(oid);  -- restrict to current search_path
+SELECT oid::regprocedure
+FROM pg_proc
+WHERE pg_function_is_visible(oid)  -- restrict to current search_path
+AND proname LIKE 'fname%';  -- name without schema-qualification
 ```
 
 ## Query processes
