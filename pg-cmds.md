@@ -12,7 +12,16 @@ WHERE routines.specific_schema='public'
 AND routines.routine_name LIKE 'svg%'
 ORDER BY routines.routine_name, parameters.ordinal_position;
 ```
-Or in psql:
+
+Or:
+```sql
+SELECT oid::regprocedure
+FROM pg_proc
+WHERE pg_function_is_visible(oid)  -- restrict to current search_path
+AND proname LIKE 'fname%';  -- name without schema-qualification
+```
+
+Or in `psql`:
 ```
 \df [ pattern ]
 ```
