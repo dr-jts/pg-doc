@@ -9,7 +9,7 @@ SELECT routines.routine_name, parameters.data_type, parameters.ordinal_position
 FROM information_schema.routines
     LEFT JOIN information_schema.parameters ON routines.specific_name=parameters.specific_name
 WHERE routines.specific_schema='public'
-AND routines.routine_name LIKE 'svg%'
+AND routines.routine_name ILIKE 'svg%'
 ORDER BY routines.routine_name, parameters.ordinal_position;
 ```
 
@@ -18,7 +18,7 @@ Or:
 SELECT oid::regprocedure
 FROM pg_proc
 WHERE pg_function_is_visible(oid)  -- restrict to current search_path
-AND proname LIKE 'fname%';  -- name without schema-qualification
+AND proname ILIKE 'fname%';  -- name without schema-qualification
 ```
 
 Or in `psql`:
