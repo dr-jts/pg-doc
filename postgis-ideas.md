@@ -7,6 +7,8 @@ Instead of ST_AddPoint / ST_StartPoint
 ## ST_MakeRegularPolygon
 `ST_MakeRegularPolygon(centerx, centery, radius, npts, [angleOffset] )`
 
+## COGO / Bearing & Distance
+
 # Geometry Accessors
 
 ## ST_Explode
