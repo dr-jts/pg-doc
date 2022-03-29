@@ -1,3 +1,5 @@
+Ideas for new PostGIS functionality.
+
 # Geometry Creators
 
 ## ST_CloseRing
