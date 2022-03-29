@@ -55,6 +55,15 @@ See https://gis.stackexchange.com/questions/345463/how-can-i-extend-a-linestring
 ## ST_LineAddPoint(line, point, [ index to add after ]) 
 Inserts a point into a LineString at end of the line. Optionally allow specifying the index to add the point after.
 
+# Linear Referencing
+
+## ST_LineNotBetween
+
+Keep sections of a line which do NOT contain given M value range.
+Inverse of `ST_LineBetween`.
+
+See <https://gis.stackexchange.com/questions/427321/st-difference-drops-m-values-how-to-subtract-line-segments>
+
 ## ST_LineMergeWin 
 Window function to merge lines in a network, returning an id indicating which path each input line is part of.  Paths can then be merged using ST_LineMerge as needed.
 
