@@ -30,6 +30,10 @@ In JTS Lab.
 See this for use case:
 https://gis.stackexchange.com/questions/90167/how-to-create-a-buffer-on-a-linestring-with-varying-or-increasing-decreasing-wid
 
+## ST_Centreline
+Compute centerline(s) of a polygonal geometry.
+
+
 ## Overlay
 
 ### ST_Overlay
