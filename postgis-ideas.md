@@ -33,6 +33,10 @@ https://gis.stackexchange.com/questions/90167/how-to-create-a-buffer-on-a-linest
 ## ST_Centreline
 Compute centerline(s) of a polygonal geometry.
 
+See:
+* <https://github.com/MapServer/MapServer/pull/5854>
+* <https://bl.ocks.org/veltman/403f95aee728d4a043b142c52c113f82>
+* <https://eox.at/2015/12/curved-labels/>
 
 ## Overlay
 
