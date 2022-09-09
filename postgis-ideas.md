@@ -30,13 +30,19 @@ In JTS Lab.
 See this for use case:
 https://gis.stackexchange.com/questions/90167/how-to-create-a-buffer-on-a-linestring-with-varying-or-increasing-decreasing-wid
 
-## ST_Centreline
+### `ST_Centreline`
 Compute centerline(s) of a polygonal geometry.
 
 See:
 * <https://github.com/MapServer/MapServer/pull/5854>
 * <https://bl.ocks.org/veltman/403f95aee728d4a043b142c52c113f82>
 * <https://eox.at/2015/12/curved-labels/>
+
+### `ST_LineMerge` with Distance Tolerance
+
+Snap line endpoints within distance tolerance to form single closed line.
+
+For use case see <https://gis.stackexchange.com/questions/440285/closing-a-concave-v-shaped-multilinestring-in-postgis-to-form-a-polygon>
 
 ## Overlay
 
