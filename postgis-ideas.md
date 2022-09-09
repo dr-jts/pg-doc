@@ -38,12 +38,6 @@ See:
 * <https://bl.ocks.org/veltman/403f95aee728d4a043b142c52c113f82>
 * <https://eox.at/2015/12/curved-labels/>
 
-### `ST_LineMerge` with Distance Tolerance
-
-Snap line endpoints within distance tolerance to form single closed line.
-
-For use case see <https://gis.stackexchange.com/questions/440285/closing-a-concave-v-shaped-multilinestring-in-postgis-to-form-a-polygon>
-
 ## Overlay
 
 ### ST_Overlay
@@ -71,6 +65,16 @@ See https://gis.stackexchange.com/questions/345463/how-can-i-extend-a-linestring
 ### ST_LineAddPoint(line, point, [ index to add after ]) 
 Inserts a point into a LineString at end of the line. Optionally allow specifying the index to add the point after.
 
+### `ST_LineMerge` with Distance Tolerance
+
+Snap line endpoints within distance tolerance to form single closed line.
+
+For use case see <https://gis.stackexchange.com/questions/440285/closing-a-concave-v-shaped-multilinestring-in-postgis-to-form-a-polygon>
+
+### ST_LineMergeWin 
+Window function to merge lines in a network, returning an id indicating which path each input line is part of.  Paths can then be merged using ST_LineMerge as needed.
+
+
 ## Linear Referencing
 
 ### ST_LineNotBetween
@@ -79,9 +83,6 @@ Keep sections of a line which do NOT contain given M value range.
 Inverse of `ST_LineBetween`.
 
 See <https://gis.stackexchange.com/questions/427321/st-difference-drops-m-values-how-to-subtract-line-segments>
-
-### ST_LineMergeWin 
-Window function to merge lines in a network, returning an id indicating which path each input line is part of.  Paths can then be merged using ST_LineMerge as needed.
 
 ## Clustering
 
