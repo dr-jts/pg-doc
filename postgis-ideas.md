@@ -24,6 +24,15 @@ Remove empty geometries (perhaps provide option to keep empty atomic geometries?
 
 ## Processing
 
+### `ST_MinimumDiameter`
+
+Minimum Diameter (width) of the points in a geometry
+
+### `ST_MaximumDiameter`
+
+Maximum Diameter (width) of the points in a geometry. 
+This is determined by the furthest two of the points defining the Minimum Bounding Circle.
+
 ### Variable-Width Buffer
 In JTS Lab.
 
