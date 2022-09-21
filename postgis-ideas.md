@@ -59,6 +59,8 @@ Possible: aggregate function
 Implementation: initially node/polygonize/point-in-poly to remove holes
 Later: OverlayNG enhancement?  FORSE?
 
+### `ST_Split` with a distance tolerance
+
 ### ST_NodeErrors 
 Display intersections remaining after ST_Noding fails.
 
