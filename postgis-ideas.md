@@ -16,6 +16,10 @@ Instead of ST_AddPoint / ST_StartPoint
 ### ST_Explode
 Like ST_Dump, but only returns geometry elements (so simpler and less confusing SQL)
 
+### ST_Boundary with Boundary Node Rule
+
+See `ST_Relate` with Boundary Node Rule.
+
 ## Geometry Editors
 
 ### ST_Combine(geometry or collections, geometry or collection)
