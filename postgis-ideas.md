@@ -119,8 +119,13 @@ New function?  Or option to existing one?
 Transform a geometry by translating and scaling to fit a viewport rectangle (actually the envelope of an arbitrary geom)
 Optional parameter to specify if scaling is isometric or anamorphic?
 
-AffineTransformation - Resize and Set position
+### ST_TransScale
+AffineTransformation - Resize and Set position.
 `ST_TransScale` is too hard to use.  Need a function which sets absolute size of geom, and absolute position
+
+### ST_Translate taking two points
+* Provide a signature taking two points, which determine the X and Y offsets and source anchor point.
+* Also, provide a signature that just takes one target point, which the geometry centroid is moved to.
 
 ## Point Generation
 ### Halton Points
