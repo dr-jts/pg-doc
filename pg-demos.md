@@ -4,7 +4,11 @@ Ideas for demos in PostGIS
 
 ## Maps and Graphics
 
-### Barnes Interpolation in SQL
+### Surface Interpolation in SQL
+
+* Barnes Surfaces
+* Heatmaps
+
 
 Use arrays?  Or a table?  Or raster?
 
