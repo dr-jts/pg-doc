@@ -9,6 +9,9 @@ Ideas for demos in PostGIS
 * Barnes Surfaces
 * Heatmaps
 
+### Hex Grid maps
+
+- Cartograms?
 
 Use arrays?  Or a table?  Or raster?
 
