@@ -1,5 +1,9 @@
 ## psql Commands
 
+### Show query time
+
+`\timing`
+
 ### Formatting
 
 * `\pset format aligned` - show table formatting
