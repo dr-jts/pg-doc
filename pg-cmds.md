@@ -43,6 +43,19 @@ WHERE pg_function_is_visible(oid)  -- restrict to current search_path
 AND proname LIKE 'fname%';  -- name without schema-qualification
 ```
 
+## Extensions
+
+* List extensions:
+```
+SELECT * FROM pg_available_extensions;
+```
+
+* List installed extensions:
+```
+SELECT * FROM pg_extension;
+```
+
+
 ## Query processes
 
 ### Kill a query process
