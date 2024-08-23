@@ -46,12 +46,12 @@ AND proname LIKE 'fname%';  -- name without schema-qualification
 ## Extensions
 
 * List extensions:
-```
+```sql
 SELECT * FROM pg_available_extensions;
 ```
 
 * List installed extensions:
-```
+```sql
 SELECT * FROM pg_extension;
 ```
 
