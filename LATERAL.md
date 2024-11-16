@@ -1,17 +1,17 @@
 # JOIN LATERAL Patterns
 
-## Ways to think about JOIN LATERAL
-
-<https://stackoverflow.com/questions/28550679/what-is-the-difference-between-lateral-join-and-a-subquery-in-postgresql>
-<https://stackoverflow.com/questions/25536422/optimize-group-by-query-to-retrieve-latest-row-per-user>
-
-### Postgres Manual Description
+## Postgres Manual Description
 
 [**LATERAL Subqueries**](https://www.postgresql.org/docs/current/queries-table-expressions.html#QUERIES-LATERAL)
 
 > Subqueries appearing in FROM can be preceded by the key word LATERAL. This allows them to reference columns provided by preceding FROM items. (Without LATERAL, each subquery is evaluated independently and so cannot cross-reference any other FROM item.)
 
 > Table functions appearing in FROM can also be preceded by the key word LATERAL, but for functions the key word is optional; the function's arguments can contain references to columns provided by preceding FROM items in any case.
+
+## Ways to think about JOIN LATERAL
+
+<https://stackoverflow.com/questions/28550679/what-is-the-difference-between-lateral-join-and-a-subquery-in-postgresql>
+<https://stackoverflow.com/questions/25536422/optimize-group-by-query-to-retrieve-latest-row-per-user>
 
 ### In-line SELECT
 
