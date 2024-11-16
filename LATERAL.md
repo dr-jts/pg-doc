@@ -20,7 +20,7 @@ JOIN LATERAL can be thought of as a way to remove both of those restrictions.
 
 ### Looping
 
-A LATERAL join is like a SQL foreach loop, in which the query iterates over each row in a result set 
+A LATERAL join is like a SQL` for-each` loop, in which the query iterates over each row in a result set 
 and evaluates a subquery using that row as a parameter.
 
 ## Usage Patterns
