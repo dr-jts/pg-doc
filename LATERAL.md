@@ -18,7 +18,7 @@
 A SELECT can be used in a *select-list* (this is called a **correlated subquery**), but only if it returns a single row with a single column.
 JOIN LATERAL can be thought of as a way to remove both of those restrictions.
 
-### Looping
+### For-each Loop
 
 A LATERAL join is like a SQL `for-each` loop, which iterates over each row in a result set 
 and evaluates a subquery using that row as a parameter.
