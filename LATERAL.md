@@ -21,9 +21,9 @@ JOIN LATERAL can be thought of as a way to remove both of those restrictions.
 A LATERAL join is like a SQL foreach loop, in which the query iterates over each row in a result set 
 and evaluates a subquery using that row as a parameter.
 
+## Usage Patterns
 
-
-## Factor out expressions
+### Factor out expressions
 
 ```sql
 select
@@ -40,13 +40,13 @@ from kickstarter_data,
     lateral (select (deadline - launched_at)/86400.00 as duration) dr;
 ```
 
-## Loop over rows
+### Loop over rows
 
-## Top-N queries
+### Top-N queries
 
-## User-Defined function returning multiple rows
+### User-Defined function returning multiple rows
 
-## Access elements of complex data
+### Access elements of complex data
 
 ```sql
 WITH data(geom)AS (VALUES ( 'MULTIPOINT((1 1), (2 2), (3 3), (4 4))'::geometry ) )
